@@ -1,0 +1,99 @@
+@font-face {
+  font-family: "Lato Regular";
+  src: url("./public/fonts/Lato-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Lato Italic";
+  src: url("./public/fonts/Lato-Italic.ttf");
+}
+
+@font-face {
+  font-family: "Lato Bold";
+  src: url("./public/fonts/Lato-Bold.ttf");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: 1020px;
+  margin: 0 auto;
+}
+
+.header {
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Lato Bold", sans-serif;
+  text-transform: uppercase;
+  background-color: #2d303a;
+  border-bottom: 7px solid #323746;
+}
+
+.logo {
+  margin: 0 40px;
+}
+
+.logo__title {
+  font-size: 25px;
+  line-height: 6px;
+  color: #ffffff;
+}
+
+.logo__asterisk {
+  color: #f06c64;
+}
+
+.main-menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #ffffff;
+  margin: 0 40px;
+}
+
+.main-menu__item {
+  position: relative;
+  font-size: 12px;
+  line-height: 6px;
+  padding: 0 15px;
+  list-style: none;
+}
+
+.main-menu__item:not(:first-child)::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background-color: #424657;
+}
+
+.main-menu__item:hover {
+  color: #f06c64;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
