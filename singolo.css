@@ -13,6 +13,11 @@
   src: url("./public/fonts/Lato-Bold.ttf");
 }
 
+@font-face {
+  font-family: "Lato Black";
+  src: url("./public/fonts/Lato-Black.ttf");
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -159,6 +164,65 @@
   transform: translate(-60px, 133px) rotate(-90deg);
 }
 
+/*----------------------------------------services-----------------*/
+
+.services__wrapper {
+  padding: 68px 40px;
+}
+
+.services__title {
+  font-size: 30px;
+  line-height: 18px;
+  color: #666d89;
+  font-family: "Lato Black", sans-serif;
+}
+
+.services__desc {
+  font-size: 18px;
+  line-height: 30px;
+  color: #767e9e;
+  font-family: "Lato Regular", sans-serif;
+  padding: 33px 0 50px;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+  grid-gap: 35px 20px;
+}
+
+.details__item {
+  display: flex;
+}
+
+.details-img__wrapper {
+  min-width: 59px;
+  height: 59px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 2px solid #666d89;
+}
+
+.details__wrapper {
+  padding-left: 20px;
+}
+
+.details__title {
+  font-size: 18px;
+  line-height: 18px;
+  color: #666d89;
+  font-family: "Lato Black", sans-serif;
+  padding-bottom: 15px;
+}
+
+.details__desc {
+  font-size: 12px;
+  line-height: 22px;
+  color: #767e9e;
+  font-family: "Lato Regular", sans-serif;
+}
 
 
 
