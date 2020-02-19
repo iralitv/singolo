@@ -39,6 +39,11 @@
   border-bottom: 7px solid #323746;
 }
 
+.link {
+  color: inherit;
+  text-decoration: none;
+}
+
 .logo {
   margin: 0 40px;
 }
