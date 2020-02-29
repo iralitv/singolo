@@ -38,6 +38,20 @@ html {
   box-sizing: border-box;
 }
 
+.main-title {
+  font-size: 3rem;
+  line-height: 1.8rem;
+  letter-spacing: -.2px;
+  font-family: "Lato Black", sans-serif;
+}
+
+.main-desc {
+  font-size: 1.8rem;
+  line-height: 3rem;
+  font-family: "Lato Light", sans-serif;
+  text-align: justify;
+}
+
 .header {
   height: 97px;
   display: flex;
@@ -191,20 +205,12 @@ html {
 }
 
 .services__title {
-  font-size: 3rem;
-  line-height: 1.8rem;
-  letter-spacing: -.2px;
   color: #666d89;
-  font-family: "Lato Black", sans-serif;
 }
 
 .services__desc {
-  font-size: 1.8rem;
-  line-height: 3rem;
   color: #767e9e;
-  font-family: "Lato Light", sans-serif;
   padding: 27px 0 44px;
-  text-align: justify;
 }
 
 .details {
