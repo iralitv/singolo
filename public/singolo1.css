@@ -1,26 +1,26 @@
 @font-face {
   font-family: "Lato Light";
-  src: url("./public/fonts/Lato-Light.ttf");
+  src: url("fonts/Lato-Light.ttf");
 }
 
 @font-face {
   font-family: "Lato Regular";
-  src: url("./public/fonts/Lato-Regular.ttf");
+  src: url("fonts/Lato-Regular.ttf");
 }
 
 @font-face {
   font-family: "Lato Italic";
-  src: url("./public/fonts/Lato-Italic.ttf");
+  src: url("fonts/Lato-Italic.ttf");
 }
 
 @font-face {
   font-family: "Lato Bold";
-  src: url("./public/fonts/Lato-Bold.ttf");
+  src: url("fonts/Lato-Bold.ttf");
 }
 
 @font-face {
   font-family: "Lato Black";
-  src: url("./public/fonts/Lato-Black.ttf");
+  src: url("fonts/Lato-Black.ttf");
 }
 
 * {
@@ -129,19 +129,19 @@ html {
 
 .mobile__slider::before {
   left: 40px;
-  background-image: url("./public/img/arrow-left.svg");
+  background-image: url("img/arrow-left.svg");
 }
 
 .mobile__slider::after {
   right: 40px;
-  background-image: url("./public/img/arrow-right.svg");
+  background-image: url("img/arrow-right.svg");
 }
 
 .mobile__item {
   width: 215px;
   height: 460px;
   border-radius: 27px;
-  background-image: url("./public/img/mobile.svg");
+  background-image: url("img/mobile.svg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
@@ -169,7 +169,7 @@ html {
   height: 334px;
   background-repeat: no-repeat;
   background-position: -13px -133px;
-  background-image: url("./public/img/layer-horizontal.svg");
+  background-image: url("img/layer-horizontal.svg");
   transform: translate(11px, 61px);
 }
 
@@ -178,7 +178,7 @@ html {
   height: 188px;
   background-repeat: no-repeat;
   background-position: -125px -118px;
-  background-image: url("./public/img/layer-vertical.svg");
+  background-image: url("img/layer-vertical.svg");
   transform: translate(-63px, 133px) rotate(-90deg);
 }
 
