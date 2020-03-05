@@ -17,11 +17,34 @@
   </p>
   <section class="quote">
     <form action="" class="quote__form form">
-      <input type="text" class="form__item" placeholder="Name (Required)" required>
-      <input type="email" class="form__item" placeholder="Email (Required)" required>
-      <input type="text" class="form__item" placeholder="Subject">
-      <textarea rows=12 class="form__item" placeholder="Describe your project in detail..."></textarea>
-      <button class="form__submit">Send</button>
+      <input
+          type="text"
+          class="form__item"
+          placeholder="Name (Required)"
+          minlength="3"
+          maxlength="40"
+          required
+      >
+      <input
+          type="email"
+          class="form__item"
+          placeholder="Email (Required)"
+          required
+      >
+      <input
+          type="text"
+          class="form__item"
+          placeholder="Subject"
+      >
+      <textarea
+          rows=12
+          class="form__item"
+          placeholder="Describe your project in detail..."
+      ></textarea>
+      <button
+          type="submit"
+          class="form__submit"
+      >Send</button>
       </form>
     <section class="quote__contacts contact">
       <h3 class="contact__title">Contact Information</h3>
