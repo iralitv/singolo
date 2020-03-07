@@ -53,7 +53,7 @@ html {
 }
 
 .header {
-  height: 97px;
+  height: 95px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -123,7 +123,7 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 50px 112px 88px;
+  padding: 52px 112px 88px;
   background: #f06c64;
 }
 
@@ -167,7 +167,7 @@ html {
 }
 
 .mobile__item--vertical {
-  transform: translate(-148px, 0) rotate(90deg);
+  transform: translate(-147px, 0) rotate(90deg);
   -webkit-box-shadow: 25px -25px 0 0 #ce5d56;
   -moz-box-shadow: 25px -25px 0 0 #ce5d56;
   box-shadow: 25px -25px 0 0 #ce5d56;
@@ -191,7 +191,7 @@ html {
   width: 334px;
   height: 188px;
   background-repeat: no-repeat;
-  background-position: -125px -118px;
+  background-position: -127px -119px;
   background-image: url("img/layer-vertical.svg");
   transform: translate(-63px, 133px) rotate(-90deg);
 }
@@ -199,7 +199,7 @@ html {
 /*----------------------------------------services-----------------*/
 
 .services__wrapper {
-  padding: 68px 40px;
+  padding: 68px 40px 60px;
   background-color: #f2f2f2;
   border-bottom: 6px solid #ffffff;
 }

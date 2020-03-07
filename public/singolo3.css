@@ -1,11 +1,11 @@
 .feedback {
   color: #f0d8d9;
   background-color: #f06c64;
-  padding: 69px 40px 21px;
+  padding: 67px 40px 21px;
 }
 
 .feedback__desc {
-  margin: 27px 0 44px;
+  margin: 27px 0 43px;
   text-align: justify;
 }
 
@@ -31,7 +31,7 @@
 }
 
 textarea.form__item {
-  padding: 7px 15px 12px;
+  padding: 8px 15px 12px;
 }
 
 .form__item::placeholder {
@@ -74,11 +74,11 @@ textarea.form__item {
   line-height: 1.8rem;
   font-family: "Lato Black", sans-serif;
   color: #f0d8d9;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .contact__desc {
-  letter-spacing: -0.3px;
+  letter-spacing: -0.4px;
   text-align: justify;
   margin-bottom: 20px;
 }
