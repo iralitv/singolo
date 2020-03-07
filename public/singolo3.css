@@ -1,0 +1,136 @@
+.feedback {
+  color: #f0d8d9;
+  background-color: #f06c64;
+  padding: 67px 40px 21px;
+}
+
+.feedback__desc {
+  margin: 27px 0 43px;
+  text-align: justify;
+}
+
+.quote {
+  display: grid;
+  grid-template-columns: 620px auto;
+  grid-gap: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__item {
+  color: #ffffff;
+  border: 0;
+  border-radius: 5px;
+  background-color: #d6564f;
+  padding: 12px 15px;
+  margin-bottom: 14px;
+  outline: none;
+}
+
+textarea.form__item {
+  padding: 8px 15px 12px;
+}
+
+.form__item::placeholder {
+  font-size: 1.2rem;
+  line-height: 2.2rem;
+  font-family: 'Lato Regular',sans-serif;
+  color: #f48c8f;
+}
+
+.form__submit {
+  align-self: center;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-family: 'Lato Bold',sans-serif;
+  color: #f0d8d9;
+  border: 0;
+  border-radius: 30px;
+  background-color: #d1423a;
+  padding: 10px 35px;
+  transition: 0.3s;
+}
+
+.form__submit:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 1px 1px 0 0 #af3029;
+  -moz-box-shadow: 1px 1px 0 0 #af3029;
+  box-shadow: 1px 1px 0 0 #af3029;
+  transform: translate(-1px, -1px);
+}
+
+.contact {
+  font-size: 1.2rem;
+  line-height: 2.2rem;
+  font-family: "Lato Regular", sans-serif;
+  color: #f0d8d9;
+}
+
+.contact__title {
+  font-size: 1.8rem;
+  line-height: 1.8rem;
+  font-family: "Lato Black", sans-serif;
+  color: #f0d8d9;
+  margin-bottom: 10px;
+}
+
+.contact__desc {
+  letter-spacing: -0.4px;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.fa {
+  justify-self: center;
+}
+
+.fa-phone {
+  transform: rotate(-90deg);
+}
+
+.info__item {
+  display: grid;
+  grid-template-columns: 15px auto;
+  align-items: center;
+  grid-gap: 8px;
+  text-decoration: none;
+  color: #f0d8d9;
+}
+
+.info__item:visited {
+  color: #d1423a;
+}
+
+.info__item:hover {
+  color: #ffffff;
+}
+
+
+
+/*------footer---------------*/
+
+.footer {
+  height: 76px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2d303a;
+  padding: 0 39px 0 42px;
+}
+
+.copyright {
+  font-size: 1.2rem;
+  font-family: "Lato Regular", sans-serif;
+  color: #666d89;
+}
+
+
+
