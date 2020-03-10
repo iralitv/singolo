@@ -48,6 +48,7 @@ html {
 .main-desc {
   font-size: 1.8rem;
   line-height: 3rem;
+  letter-spacing: -.2px;
   font-family: "Lato Light", sans-serif;
   text-align: justify;
 }
@@ -72,7 +73,7 @@ html {
 .logo__title {
   font-size: 2.5rem;
   line-height: 6px;
-  letter-spacing: -0.5px;
+  letter-spacing: -1.3px;
   color: #ffffff;
 }
 
@@ -95,8 +96,8 @@ html {
   position: relative;
   font-size: 1.2rem;
   line-height: 0.6rem;
-  letter-spacing: -0.2px;
-  padding: 0 15px;
+  letter-spacing: -0.1px;
+  padding: 0 14px;
   list-style: none;
 }
 
@@ -205,10 +206,12 @@ html {
 }
 
 .services__title {
+  letter-spacing: -1.1px;
   color: #666d89;
 }
 
 .services__desc {
+  letter-spacing: -0.5px;
   color: #767e9e;
   padding: 27px 0 44px;
 }
@@ -232,7 +235,7 @@ html {
   align-items: center;
   border-radius: 50%;
   border: 2px solid #666d89;
-  margin-top: 3px;
+  margin-top: 2px;
 }
 
 .details__wrapper {
@@ -242,7 +245,7 @@ html {
 .details__title {
   font-size: 1.8rem;
   line-height: 1.8rem;
-  letter-spacing: -.1px;
+  letter-spacing: -.5px;
   color: #666d89;
   font-family: "Lato Black", sans-serif;
   padding-bottom: 10px;

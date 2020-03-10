@@ -4,7 +4,12 @@
   padding: 67px 40px 21px;
 }
 
+.feedback__title {
+  letter-spacing: -0.7px;
+}
+
 .feedback__desc {
+  letter-spacing: -.5px;
   margin: 27px 0 43px;
   text-align: justify;
 }
@@ -35,6 +40,7 @@ textarea.form__item {
 }
 
 .form__item::placeholder {
+  letter-spacing: -0.3px;
   font-size: 1.2rem;
   line-height: 2.2rem;
   font-family: 'Lato Regular',sans-serif;
@@ -72,9 +78,11 @@ textarea.form__item {
 .contact__title {
   font-size: 1.8rem;
   line-height: 1.8rem;
+  letter-spacing: -.3px;
   font-family: "Lato Black", sans-serif;
   color: #f0d8d9;
-  margin-bottom: 10px;
+  margin-top: 2px;
+  margin-bottom: 9px;
 }
 
 .contact__desc {
@@ -123,7 +131,7 @@ textarea.form__item {
   justify-content: space-between;
   align-items: center;
   background-color: #2d303a;
-  padding: 0 39px 0 42px;
+  padding: 0 40px 0 41px;
 }
 
 .copyright {

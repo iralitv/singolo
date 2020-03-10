@@ -9,8 +9,9 @@
 }
 
 .portfolio__desc {
+  letter-spacing: -.45px;
   color: #767e9e;
-  padding: 26px 0 12px;
+  padding: 28px 0 9px;
 }
 
 .tags {
@@ -20,7 +21,7 @@
 .tags__btn {
   box-sizing: border-box;
   font-size: 1.2rem;
-  letter-spacing: -0.2px;
+  letter-spacing: -0.1px;
   color: #767e9e;
   border-radius: 5px;
   border: 1px solid #767e9e;
@@ -44,7 +45,7 @@
 }
 
 .portfolio__img {
-  padding-top: 19px;
+  padding-top: 20px;
 }
 
 .portfolio-img__wrapper {
@@ -133,10 +134,12 @@
 }
 
 .about__title {
+  letter-spacing: -.8px;
   color: #666d89;
 }
 
 .about__desc {
+  letter-spacing: -.5px;
   color: #767e9e;
   padding: 27px 0 46px;
 }
@@ -161,7 +164,7 @@
 .employee__name {
   font-size: 1.8rem;
   line-height: 1.8rem;
-  letter-spacing: -0.2px;
+  letter-spacing: -0.9px;
   color: #666d89;
   font-family: "Lato Black", sans-serif;
   padding-top: 17px;
@@ -170,10 +173,11 @@
 .employee__desc {
   font-size: 1.2rem;
   line-height: 2.2rem;
+  letter-spacing: -0.1px;
   color: #767e9e;
   font-family: "Lato Regular", sans-serif;
   text-align: justify;
-  padding: 9px 0 23px;
+  padding: 9px 0 22px;
 }
 
 .share {
