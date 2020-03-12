@@ -65,9 +65,48 @@ html {
   padding: 0 25px 0 40px;
 }
 
-.link {
+a {
   color: inherit;
   text-decoration: none;
+}
+
+.link {
+  position: relative;
+  border-bottom: 2px solid transparent;
+}
+
+.link::before {
+  content: '';
+  width: 0;
+  height: 2px;
+  position: absolute;
+  bottom: -5px;
+  background: white;
+}
+
+.link:hover::before {
+  width: 100%;
+  transition: width ease-out .3s;
+}
+
+.link.active::after {
+  content: '';
+  width: 0;
+  height: 2px;
+  position: absolute;
+  right: 0;
+  top: -5px;
+  background: #f06c64;
+  transition: width .3s;
+}
+
+.link.active:hover::after{
+  width: 100%;
+}
+
+.link.active {
+  color: #f06c64;
+
 }
 
 .logo__title {
@@ -93,9 +132,11 @@ html {
 }
 
 .main-menu__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   font-size: 1.2rem;
-  line-height: 0.6rem;
   letter-spacing: -0.1px;
   padding: 0 14px;
   list-style: none;
@@ -110,11 +151,6 @@ html {
   height: 2px;
   border-radius: 50%;
   background-color: #424657;
-}
-
-.main-menu__item:hover {
-  color: #f06c64;
-  cursor: pointer;
 }
 
 /*-----------------------mobile section-----------------------*/
