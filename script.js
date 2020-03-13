@@ -8,17 +8,28 @@ MENU.addEventListener('click', (event) => {
   event.target.classList.add('active');
 });
 
+// fade mobile screen
+
+const SLIDER = document.getElementById('slider');
+
+SLIDER.addEventListener('click', (event) => {
+  let classes = Array.from(event.target.classList);
+
+  if (classes.includes('slide__btn')) {
+    classes.includes('next') ? plusSlides(1) : plusSlides(-1);
+  }
+
+  if (classes.includes('mobile__screen')) {
+    event.target.classList.toggle('mobile__screen--fade')
+  }
+})
+
 // carousel
 
 let slideIndex = 1;
-const NEXT_SLIDE_BTN = document.getElementById('next');
-const PREV_SLIDE_BTN = document.getElementById('prev');
 let slides = document.getElementsByClassName('slide');
 
 showSlides(slideIndex);
-
-NEXT_SLIDE_BTN.addEventListener('click', () => {plusSlides(1)});
-PREV_SLIDE_BTN.addEventListener('click', () => {plusSlides(-1)});
 
 function plusSlides(n) {
   showSlides(slideIndex += n)
@@ -31,13 +42,3 @@ function showSlides(index) {
   Array.from(slides).forEach(item => item.style.display = 'none');
   slides[slideIndex-1].style.display = 'flex';
 }
-
-// fade mobile screen
-
-const MOBILE = document.getElementById('mobile');
-
-MOBILE.addEventListener('click', (event) => {
-  if (Array.from(event.target.classList).includes('mobile__screen')) {
-    event.target.classList.toggle('mobile__screen--fade')
-  }
-})
