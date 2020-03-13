@@ -30,6 +30,7 @@
 
 html {
   font-size: 10px;
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -97,7 +98,7 @@ a {
   right: 0;
   top: -5px;
   background: #f06c64;
-  transition: width .3s;
+  transition: width 0.3s;
 }
 
 .link.active:hover::after{
@@ -155,7 +156,7 @@ a {
 
 /*-----------------------mobile section-----------------------*/
 
-.mobile__slider {
+.slide {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -164,28 +165,9 @@ a {
   background: #f06c64;
 }
 
-.mobile__slider::before,
-.mobile__slider::after {
-  content: '';
-  position: absolute;
-  top: 47%;
-  width: 15px;
-  height: 26px;
-}
-
 .mobile__slider:hover::before,
 .mobile__slider:hover::after {
   cursor: pointer;
-}
-
-.mobile__slider::before {
-  left: 40px;
-  background-image: url("img/arrow-left.svg");
-}
-
-.mobile__slider::after {
-  right: 40px;
-  background-image: url("img/arrow-right.svg");
 }
 
 .mobile__item {
@@ -231,6 +213,44 @@ a {
   background-position: -127px -119px;
   background-image: url("img/layer-vertical.svg");
   transform: translate(-63px, 133px) rotate(-90deg);
+}
+
+.slide__container {
+  max-width: 1020px;
+  height: 600px;
+  position: relative;
+  margin: auto;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 16px;
+  border-radius: 50%;
+  user-select: none;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.prev {
+  left: 40px;
+  background-image: url("img/arrow-left.svg");
+}
+
+.next {
+  right: 40px;
+  background-image: url("img/arrow-right.svg");
 }
 
 /*----------------------------------------services-----------------*/
