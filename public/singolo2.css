@@ -16,6 +16,7 @@
 
 .tags {
   display: flex;
+  width: fit-content;
 }
 
 .tags__btn {
@@ -44,6 +45,11 @@
   transform: translate(-1px, -1px);
 }
 
+.tags__btn--active {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
 .portfolio__img {
   padding-top: 20px;
 }
@@ -55,10 +61,16 @@
 }
 
 .portfolio-img__item {
+  box-sizing: border-box;
   width: 220px;
   height: 187px;
   background-color: #464b5e;
   background-repeat: no-repeat;
+  border: 5px solid transparent;
+}
+
+.portfolio-img__item--active {
+  border: 5px solid #F06C64;
 }
 
 .portfolio-img__item:nth-child(n+13) {

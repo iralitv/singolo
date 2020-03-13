@@ -13,16 +13,16 @@ MENU.addEventListener('click', (event) => {
 const SLIDER = document.getElementById('slider');
 
 SLIDER.addEventListener('click', (event) => {
-  let classes = Array.from(event.target.classList);
+  let classes = event.target.classList;
 
-  if (classes.includes('slide__btn')) {
-    classes.includes('next') ? plusSlides(1) : plusSlides(-1);
+  if (classes.contains('slide__btn')) {
+    classes.contains('next') ? plusSlides(1) : plusSlides(-1);
   }
 
-  if (classes.includes('mobile__screen')) {
-    event.target.classList.toggle('mobile__screen--fade')
+  if (classes.contains('mobile__screen')) {
+    classes.toggle('mobile__screen--fade')
   }
-})
+});
 
 // carousel
 
@@ -42,3 +42,37 @@ function showSlides(index) {
   Array.from(slides).forEach(item => item.style.display = 'none');
   slides[slideIndex-1].style.display = 'flex';
 }
+
+// portfolio
+
+const TABS = document.getElementById('tabs');
+const IMAGES = document.getElementById('portfolio-img-id');
+
+TABS.addEventListener('click', (event) => {
+  TABS.querySelectorAll('button').forEach(item => {
+    item.classList.remove('tags__btn--active')
+  });
+
+  if (event.target.value) {
+    event.target.classList.add('tags__btn--active');
+    mixImage();
+  }
+});
+
+let randomPosition = () => Math.floor(Math.random() * 12);
+
+function mixImage() {
+  IMAGES.querySelectorAll('.portfolio-img__item')
+    .forEach(item => item.style.order = `${randomPosition()}`)
+}
+
+IMAGES.addEventListener('click', (event) => {
+  IMAGES.querySelectorAll('.portfolio-img__item').forEach(item => {
+    item.classList.remove('portfolio-img__item--active')
+  });
+
+  event.target.classList.add('portfolio-img__item--active');
+});
+
+
+
