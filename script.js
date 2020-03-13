@@ -17,8 +17,8 @@ let slides = document.getElementsByClassName('slide');
 
 showSlides(slideIndex);
 
-NEXT_SLIDE_BTN.addEventListener('click', () => {plusSlides(1)})
-PREV_SLIDE_BTN.addEventListener('click', () => {plusSlides(-1)})
+NEXT_SLIDE_BTN.addEventListener('click', () => {plusSlides(1)});
+PREV_SLIDE_BTN.addEventListener('click', () => {plusSlides(-1)});
 
 function plusSlides(n) {
   showSlides(slideIndex += n)
@@ -28,8 +28,16 @@ function showSlides(index) {
   if (index > slides.length) slideIndex = 1;
   if (index < 1) slideIndex = slides.length;
 
-  for(let i = 0; i < slides.length; i++) {
-    slides[i].style.display = 'none';
-  }
+  Array.from(slides).forEach(item => item.style.display = 'none');
   slides[slideIndex-1].style.display = 'flex';
 }
+
+// fade mobile screen
+
+const MOBILE = document.getElementById('mobile');
+
+MOBILE.addEventListener('click', (event) => {
+  if (Array.from(event.target.classList).includes('mobile__screen')) {
+    event.target.classList.toggle('mobile__screen--fade')
+  }
+})

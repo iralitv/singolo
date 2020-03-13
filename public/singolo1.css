@@ -165,11 +165,6 @@ a {
   background: #f06c64;
 }
 
-.mobile__slider:hover::before,
-.mobile__slider:hover::after {
-  cursor: pointer;
-}
-
 .mobile__item {
   width: 215px;
   height: 460px;
@@ -213,6 +208,12 @@ a {
   background-position: -127px -119px;
   background-image: url("img/layer-vertical.svg");
   transform: translate(-63px, 133px) rotate(-90deg);
+}
+
+.mobile__screen--fade {
+  background: #2d303a;
+  animation-name: fade;
+  animation-duration: 0.5s;
 }
 
 .slide__container {
