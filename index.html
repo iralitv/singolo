@@ -156,7 +156,6 @@
             <i class="fa fa-facebook" aria-hidden="true"></i>
           </a>
           <a href="#" class="share__item">
-            <!--            <img src="./public/img/google+.svg" alt="">-->
             <i class="fa fa-google-plus" aria-hidden="true"></i>
           </a>
           <a href="#" class="share__item">
@@ -234,19 +233,29 @@
         >
         <input
             type="text"
-            class="form__item"
+            name="subject"
+            class="form__item form__item--modal"
             placeholder="Subject"
         >
         <textarea
             rows=12
-            class="form__item"
+            name="description"
+            class="form__item form__item--modal"
             placeholder="Describe your project in detail..."
         ></textarea>
         <button
             type="submit"
+            id="form-submit-id"
             class="form__submit"
         >Send</button>
       </form>
+      <div class="modal" id="modal-id">
+        <div class="modal__content">
+          <h3 class="modal__title">Message send</h3>
+          <div class="modal__info"></div>
+          <button type="button" class="close form__submit">Ok</button>
+        </div>
+      </div>
       <section class="quote__contacts contact">
         <h3 class="contact__title">Contact Information</h3>
         <p class="contact__desc">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh.

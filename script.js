@@ -74,5 +74,51 @@ IMAGES.addEventListener('click', (event) => {
   event.target.classList.add('portfolio-img__item--active');
 });
 
+// modal
+
+const SUBMIT = document.getElementById('form-submit-id');
+const MODAL = document.getElementById('modal-id');
+const MODAL_CONTENT = document.getElementsByClassName('modal__info')[0];
+const CLOSE = document.getElementsByClassName("close")[0];
+const REQUIRED_INPUTS = document.querySelectorAll('.form input:required');
+const INPUTS = document.querySelectorAll('.form__item--modal');
+
+let isFilled = () => Array.from(REQUIRED_INPUTS).every(item => item.value);
+
+SUBMIT.addEventListener('click', (event) => {
+
+  if(!isFilled()) {
+    return false
+  }
+
+  event.preventDefault();
+  MODAL.style.display = 'flex';
+
+  const defaultSubject = `<p>Without subject</p>`;
+  const defaultDescription = `<p>Without description</p>`;
+  const content = Array.from(INPUTS).map(item => {
+    if(item.value) {
+      return `<p>${item.name}: ${item.value}</p>`
+    }
+    if(item.name === 'subject') {
+      return defaultSubject;
+    }
+    return defaultDescription;
+  }).join('');
+
+  MODAL_CONTENT.innerHTML = content;
+});
+
+CLOSE.addEventListener('click', () => {
+  MODAL.style.display = 'none'
+});
+
+window.addEventListener('click', (event) => {
+  if (event.target === MODAL) {
+    MODAL.style.display = 'none'
+  }
+});
+
+
 
 
