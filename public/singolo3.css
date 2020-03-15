@@ -33,10 +33,13 @@
   padding: 12px 15px;
   margin-bottom: 14px;
   outline: none;
+  font-size: 1.2rem;
+  font-family: "Lato Regular", sans-serif;
 }
 
 textarea.form__item {
   padding: 8px 15px 12px;
+  resize: none;
 }
 
 .form__item::placeholder {
@@ -156,10 +159,21 @@ textarea.form__item {
 .modal__title {
   text-align: center;
   color: #ad2f28;
+  margin-bottom: 20px;
+}
+
+.modal__subtitle {
+  font-family: "Lato Bold", sans-serif;
+  color: #ad2f28;
 }
 
 .modal__info {
+  max-height: 300px;
+  overflow-y: scroll;
+  overflow-x: hidden;
   text-transform: capitalize;
+  padding: 5px;
+  margin-bottom: 20px;
 }
 
 .close {
@@ -171,6 +185,27 @@ textarea.form__item {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ad2f28;
+  border-radius: 3px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #79201c;
 }
 
 /*------footer---------------*/

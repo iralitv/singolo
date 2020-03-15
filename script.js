@@ -98,7 +98,7 @@ SUBMIT.addEventListener('click', (event) => {
   const defaultDescription = `<p>Without description</p>`;
   const content = Array.from(INPUTS).map(item => {
     if(item.value) {
-      return `<p>${item.name}: ${item.value}</p>`
+      return `<p><span class="modal__subtitle">${item.name}</span>: ${item.value}</p>`
     }
     if(item.name === 'subject') {
       return defaultSubject;
