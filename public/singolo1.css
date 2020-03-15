@@ -192,6 +192,10 @@ a {
   border-radius: 3px;
 }
 
+.mobile__screen:hover {
+  cursor: pointer;
+}
+
 .mobile__screen--horizontal {
   width: 188px;
   height: 334px;
