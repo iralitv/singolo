@@ -1,6 +1,6 @@
 const MENU = document.getElementById('menu');
 
-MENU.addEventListener('click', (event) => {
+MENU.addEventListener('click', event => {
   MENU.querySelectorAll('.main-menu__item a').forEach(item =>
     item.classList.remove('active')
   );
@@ -12,7 +12,7 @@ MENU.addEventListener('click', (event) => {
 
 const SLIDER = document.getElementById('slider');
 
-SLIDER.addEventListener('click', (event) => {
+SLIDER.addEventListener('click', event => {
   let classes = event.target.classList;
 
   if (classes.contains('slide__btn')) {
@@ -48,7 +48,7 @@ function showSlides(index) {
 const TABS = document.getElementById('tabs');
 const IMAGES = document.getElementById('portfolio-img-id');
 
-TABS.addEventListener('click', (event) => {
+TABS.addEventListener('click', event => {
   TABS.querySelectorAll('button').forEach(item => {
     item.classList.remove('tags__btn--active')
   });
@@ -66,7 +66,7 @@ function mixImage() {
     .forEach(item => item.style.order = `${randomPosition()}`)
 }
 
-IMAGES.addEventListener('click', (event) => {
+IMAGES.addEventListener('click', event => {
   IMAGES.querySelectorAll('.portfolio-img__item').forEach(item => {
     item.classList.remove('portfolio-img__item--active')
   });
@@ -76,27 +76,20 @@ IMAGES.addEventListener('click', (event) => {
 
 // modal
 
-const SUBMIT = document.getElementById('form-submit-id');
+const FORM = document.getElementById('form-id');
 const MODAL = document.getElementById('modal-id');
 const MODAL_CONTENT = document.getElementsByClassName('modal__info')[0];
 const CLOSE = document.getElementsByClassName("close")[0];
-const REQUIRED_INPUTS = document.querySelectorAll('.form input:required');
-const INPUTS = document.querySelectorAll('.form__item--modal');
+const FORM_INPUTS = document.querySelectorAll('.form__item');
+const MODAL_INPUTS = document.querySelectorAll('.form__item--modal');
 
-let isFilled = () => Array.from(REQUIRED_INPUTS).every(item => item.value);
-
-SUBMIT.addEventListener('click', (event) => {
-
-  if(!isFilled()) {
-    return false
-  }
-
+FORM.addEventListener('submit', event => {
   event.preventDefault();
   MODAL.style.display = 'flex';
 
   const defaultSubject = `<p>Without subject</p>`;
   const defaultDescription = `<p>Without description</p>`;
-  const content = Array.from(INPUTS).map(item => {
+  const content = Array.from(MODAL_INPUTS).map(item => {
     if(item.value) {
       return `<p><span class="modal__subtitle">${item.name}</span>: ${item.value}</p>`
     }
@@ -107,18 +100,16 @@ SUBMIT.addEventListener('click', (event) => {
   }).join('');
 
   MODAL_CONTENT.innerHTML = content;
+
+  FORM_INPUTS.forEach(item => item.value = '');
 });
 
 CLOSE.addEventListener('click', () => {
   MODAL.style.display = 'none'
 });
 
-window.addEventListener('click', (event) => {
+window.addEventListener('click', event => {
   if (event.target === MODAL) {
     MODAL.style.display = 'none'
   }
 });
-
-
-
-
