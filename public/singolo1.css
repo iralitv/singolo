@@ -55,6 +55,10 @@ html {
 }
 
 .header {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
   height: 95px;
   display: flex;
   justify-content: space-between;
@@ -155,6 +159,9 @@ a {
 }
 
 /*-----------------------mobile section-----------------------*/
+.mobile {
+  padding-top: 95px;
+}
 
 .slide {
   position: relative;

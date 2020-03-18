@@ -1,11 +1,19 @@
-const MENU = document.getElementById('menu');
+//scroll transition
+const mainNavLinks = document.querySelectorAll('.main-menu__item a');
+const headerHeight = document.querySelector('.header').offsetHeight;
 
-MENU.addEventListener('click', event => {
-  MENU.querySelectorAll('.main-menu__item a').forEach(item =>
-    item.classList.remove('active')
-  );
+window.addEventListener('scroll', event => {
+  let fromTop = window.scrollY + headerHeight;
 
-  event.target.classList.add('active');
+  mainNavLinks.forEach(link => {
+    let section = document.querySelector(link.hash);
+
+    if(section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active')
+    }
+  })
 });
 
 // fade mobile screen
