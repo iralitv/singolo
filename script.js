@@ -23,33 +23,85 @@ const SLIDER = document.getElementById('slider');
 SLIDER.addEventListener('click', event => {
   let classes = event.target.classList;
 
-  if (classes.contains('slide__btn')) {
-    classes.contains('next') ? plusSlides(1) : plusSlides(-1);
-  }
-
   if (classes.contains('mobile__screen')) {
     classes.toggle('mobile__screen--fade')
   }
 });
 
-// carousel
+// slider
+function Slider (setting) {
+  let privates = {}
 
-let slideIndex = 1;
-let slides = document.getElementsByClassName('slide');
+  privates.setting = setting;
 
-showSlides(slideIndex);
+  privates.sel = {
+    'main': document.querySelector(privates.setting.main),
+    'wrap': document.querySelector(privates.setting.wrap),
+    'children': document.querySelector(privates.setting.wrap).children,
+    'prev': document.querySelector(privates.setting.prev),
+    'next': document.querySelector(privates.setting.next),
+  }
 
-function plusSlides(n) {
-  showSlides(slideIndex += n)
+  privates.opt = {
+    'position': 0,
+    'max_position': document.querySelector(privates.setting.wrap).children.length,
+  }
+
+  privates.sel.wrap.appendChild(privates.sel.children[0].cloneNode(true))
+
+  if(privates.sel.prev !== null) {
+    privates.sel.prev.addEventListener('click', () => {
+      this.prev_slide();
+    })
+  }
+
+  if(privates.sel.next !== null) {
+    privates.sel.next.addEventListener('click', () => {
+      this.next_slide();
+    })
+  }
+
+  this.prev_slide = () => {
+    --privates.opt.position;
+
+    if(privates.opt.position < 0) {
+      privates.sel.wrap.classList.add('s-notransition')
+      privates.sel.wrap.style['transform'] = `translateX(-${privates.opt.max_position}00%)`
+      privates.opt.position = privates.opt.max_position - 1
+    }
+
+    setTimeout(() => {
+      privates.sel.wrap.classList.remove('s-notransition')
+      privates.sel.wrap.style['transform'] = `translateX(-${privates.opt.position}00%)`
+    }, 10)
+
+  }
+
+  this.next_slide = () => {
+    if(privates.opt.position < privates.opt.max_position) {
+      ++privates.opt.position;
+    }
+
+    privates.sel.wrap.classList.remove('s-notransition');
+    privates.sel.wrap.style['transform'] = `translateX(-${privates.opt.position}00%)`
+
+    privates.sel.wrap.addEventListener('webkitTransitionEnd', () => {
+      if(privates.opt.position >= privates.opt.max_position) {
+        privates.sel.wrap.classList.add('s-notransition');
+        privates.sel.wrap.style['transform'] = 'translateX(0)';
+        privates.opt.position = 0;
+      }
+    })
+  }
 }
 
-function showSlides(index) {
-  if (index > slides.length) slideIndex = 1;
-  if (index < 1) slideIndex = slides.length;
+new Slider({
+  "main": ".js-carousel",
+  "wrap": ".js-carousel__wrap",
+  "prev": ".js-carousel__prev",
+  "next": ".js-carousel__next"
+});
 
-  Array.from(slides).forEach(item => item.style.display = 'none');
-  slides[slideIndex-1].style.display = 'flex';
-}
 
 // portfolio
 

@@ -163,15 +163,6 @@ a {
   padding-top: 95px;
 }
 
-.slide {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 52px 112px 88px;
-  background: #f06c64;
-}
-
 .mobile__item {
   width: 215px;
   height: 460px;
@@ -234,9 +225,33 @@ a {
   margin: auto;
 }
 
-.fade {
-  animation-name: fade;
-  animation-duration: 1s;
+.slider__item {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 0 0 100%;
+  overflow: hidden;
+  padding: 52px 112px 88px;
+  box-sizing: border-box;
+  background: #f06c64;
+}
+
+.js-carousel {
+  overflow: hidden;
+}
+
+.js-carousel__wrap {
+  display: flex;
+  transition: 1s;
+  will-change: transform;
+  position: relative;
+  z-index: 1;
+  height: 100%;
+}
+
+.s-notransition {
+  transition: 0s !important;
 }
 
 @keyframes fade {
@@ -247,6 +262,7 @@ a {
 .prev, .next {
   cursor: pointer;
   position: absolute;
+  z-index: 2;
   top: 50%;
   padding: 16px;
   border-radius: 50%;

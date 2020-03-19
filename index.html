@@ -26,21 +26,29 @@
     </nav>
   </header>
   <section class="container mobile" id="home">
-    <div class="slide__container" id="slider">
-      <div class="slide fade">
-        <section class="mobile__item mobile__item--horizontal">
-          <div class="mobile__screen mobile__screen--horizontal"></div>
-        </section>
-        <section class="mobile__item mobile__item--vertical">
-          <div class="mobile__screen mobile__screen--vertical"></div>
-        </section>
+    <div class="slide__container js-carousel" id="slider">
+
+      <a class="slide__btn prev js-carousel__prev"></a>
+      <a class="slide__btn next js-carousel__next"></a>
+
+      <div class="js-carousel__wrap">
+
+        <div class="slider__item">
+          <section class="mobile__item mobile__item--horizontal">
+            <div class="mobile__screen mobile__screen--horizontal"></div>
+          </section>
+          <section class="mobile__item mobile__item--vertical">
+            <div class="mobile__screen mobile__screen--vertical"></div>
+          </section>
+        </div>
+
+        <div class="slider__item">
+          <p style="font-size: 50px;">lalka</p>
+          <img src="./public/img/lalka.jpg" alt="lalka" height="400">
+        </div>
+
       </div>
-      <div class="slide fade">
-        <p style="font-size: 50px;">lalka</p>
-        <img src="./public/img/lalka.jpg" alt="lalka" height="400">
-      </div>
-      <a class="slide__btn prev"></a>
-      <a class="slide__btn next"></a>
+
     </div>
 
   </section>
