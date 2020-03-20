@@ -116,10 +116,6 @@ textarea.form__item {
   color: #f0d8d9;
 }
 
-.info__item:visited {
-  color: #d1423a;
-}
-
 .info__item:hover {
   color: #ffffff;
 }

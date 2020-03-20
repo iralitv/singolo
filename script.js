@@ -102,7 +102,6 @@ new Slider({
   "next": ".js-carousel__next"
 });
 
-
 // portfolio
 
 const TABS = document.getElementById('tabs');
@@ -119,19 +118,19 @@ TABS.addEventListener('click', event => {
   }
 });
 
-let randomPosition = () => Math.floor(Math.random() * 12);
-
 function mixImage() {
-  IMAGES.querySelectorAll('.portfolio-img__item')
-    .forEach(item => item.style.order = `${randomPosition()}`)
+  for(let i = IMAGES.children.length; i > 0; i--) {
+    IMAGES.appendChild(IMAGES.children[Math.random() * i | 0]);
+  }
 }
 
 IMAGES.addEventListener('click', event => {
   IMAGES.querySelectorAll('.portfolio-img__item').forEach(item => {
     item.classList.remove('portfolio-img__item--active')
   });
-
-  event.target.classList.add('portfolio-img__item--active');
+  if (event.target.classList.contains('portfolio-img__item')){
+    event.target.classList.add('portfolio-img__item--active');
+  }
 });
 
 // modal
