@@ -173,3 +173,17 @@ window.addEventListener('click', event => {
     MODAL.style.display = 'none'
   }
 });
+
+// burger-menu
+const HEADER = document.getElementById('header-id');
+const BURGER_BUTTON = document.querySelector('.burger-menu__button');
+const NAVIGATION = document.getElementById('navigation-id');
+
+HEADER.addEventListener('click', (event) => {
+  if(event.target.parentElement === BURGER_BUTTON) {
+    event.preventDefault();
+    NAVIGATION.classList.toggle('burger-menu--active');
+  } else {
+    NAVIGATION.classList.remove('burger-menu--active');
+  }
+})

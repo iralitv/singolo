@@ -218,7 +218,7 @@ textarea.form__item {
   color: #666d89;
 }
 
-@media (min-width: 768px) and (max-width: 1020px) {
+@media screen and (max-width: 1020px) {
   .feedback {
     padding: 53px 37px 39px 42px;
   }
