@@ -126,12 +126,13 @@ function mixImage() {
 }
 
 IMAGES.addEventListener('click', event => {
-  IMAGES.querySelectorAll('.portfolio-img__item').forEach(item => {
-    item.classList.remove('portfolio-img__item--active')
+  IMAGES.querySelectorAll('.portfolio-img__item img').forEach(item => {
+    item.parentElement.classList.remove('portfolio-img__item--active')
   });
-  if (event.target.classList.contains('portfolio-img__item')){
-    event.target.classList.add('portfolio-img__item--active');
+  if (event.target.parentElement.classList.contains('portfolio-img__item')){
+    event.target.parentElement.classList.add('portfolio-img__item--active');
   }
+  console.log(event.target)
 });
 
 // modal
