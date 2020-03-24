@@ -10,6 +10,7 @@ window.addEventListener('scroll', event => {
 
     if(section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
       link.classList.add('active');
+      link.classList.contains('active')
     } else {
       link.classList.remove('active')
     }

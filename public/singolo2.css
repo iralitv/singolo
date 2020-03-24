@@ -184,6 +184,9 @@
   color: #666d89;
   font-family: "Lato Black", sans-serif;
   padding-top: 17px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .employee__desc {
@@ -227,5 +230,36 @@
   -moz-box-shadow: 1px 1px 0 0 #666d89;
   box-shadow: 1px 1px 0 0 #666d89;
   transform: translate(-1px, -1px);
+}
+
+@media (min-width: 768px) and (max-width: 1020px) {
+  .portfolio {
+    padding: 60px 40px 65px;
+  }
+
+  .portfolio-img__wrapper {
+    grid-template: repeat(4, 1fr) / repeat(3, 1fr);
+  }
+
+  .portfolio__img {
+    padding-top: 28px;
+  }
+
+  .portfolio-img__item {
+    width: 216px;
+  }
+
+  .about {
+    padding: 52px 40px 75px;
+  }
+
+  .employee__wrapper {
+    grid-template-columns: repeat(3, 32%);
+  }
+
+  .employee__photo {
+    width: 100%;
+    height: auto;
+  }
 }
 

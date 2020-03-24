@@ -91,6 +91,7 @@ textarea.form__item {
 .contact__desc {
   letter-spacing: -0.4px;
   text-align: justify;
+  line-height: 22px;
   margin-bottom: 20px;
 }
 
@@ -172,10 +173,6 @@ textarea.form__item {
   margin-bottom: 20px;
 }
 
-.close {
-
-}
-
 .close:hover,
 .close:focus {
   color: black;
@@ -217,8 +214,23 @@ textarea.form__item {
 
 .copyright {
   font-size: 1.2rem;
-  font-family: "Lato Regular", sans-serif;
+  font-family: "Lato Black", sans-serif;
   color: #666d89;
+}
+
+@media (min-width: 768px) and (max-width: 1020px) {
+  .feedback {
+    padding: 53px 37px 39px 42px;
+  }
+
+  .quote {
+    grid-template-columns: 442px auto;
+    grid-gap: 30px;
+  }
+
+  .form__submit {
+    align-self: start;
+  }
 }
 
 
