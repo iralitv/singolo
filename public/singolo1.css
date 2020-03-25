@@ -74,8 +74,14 @@ html {
   top: -8px;
 }
 
+.burger-menu__button--active .burger-menu__lines {
+  transform: rotate(90deg);
+}
+
 .burger-menu--active.navigation{
   display: flex;
+  flex-direction: column;
+  padding: 30px 20px 30px 70px;
 }
 
 .burger-menu--active .burger-menu__overlay {
@@ -436,6 +442,13 @@ a {
   .header {
     height: 71px;
     flex-direction: column;
+    padding: 0 30px;
+  }
+
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .mobile {
@@ -444,22 +457,35 @@ a {
 
   .navigation {
     display: none;
-    padding-top: 100px;
     position: fixed;
-    top: 0px;
+    top: 0;
     left: 0;
+    width: 70%;
     height: 100vh;
     box-sizing: border-box;
-    background: #c0c0c0;
+    background: #2D303A;
+    padding-top: 100px;
     z-index: 15;
   }
 
   .logo__title--burger {
     display: block;
+    font-size: 2rem;
   }
 
   .main-menu {
     flex-direction: column;
+    align-items: start;
+    margin-top: 180px;
+  }
+
+  .main-menu__item {
+    font-size: 2.4rem;
+    padding-bottom: 27px;
+  }
+
+  .link.active::after {
+    content: none;
   }
 
   .burger-menu__container {
@@ -485,24 +511,33 @@ a {
     border-bottom: 2px solid #EA676B;
   }
 
+  .mobile__screen {
+    border: 2px solid #c6c6c6;
+  }
+
   .mobile__item {
-    border-radius: 20px;
+    border-radius: 9px;
+  }
+
+  .mobile__item--horizontal {
+    -webkit-box-shadow: 9px 9px 0 0 #ce5d56;
+    -moz-box-shadow: 9px 9px 0 0 #ce5d56;
+    box-shadow: 9px 9px 0 0 #ce5d56;
   }
 
   .mobile__item--vertical {
     transform: translate(-50%, 0) rotate(90deg);
+    -webkit-box-shadow: 9px -9px 0 0 #ce5d56;
+    -moz-box-shadow: 9px -9px 0 0 #ce5d56;
+    box-shadow: 9px -9px 0 0 #ce5d56;
   }
 
-  .mobile__item--horizontal {
-    -webkit-box-shadow: 10px 10px 0 0 #ce5d56;
-    -moz-box-shadow: 10px 10px 0 0 #ce5d56;
-    box-shadow: 10px 10px 0 0 #ce5d56;
+  .prev {
+    left: 15px;
   }
 
-  .mobile__item--vertical {
-    -webkit-box-shadow: 10px -10px 0 0 #ce5d56;
-    -moz-box-shadow: 10px -10px 0 0 #ce5d56;
-    box-shadow: 10px -10px 0 0 #ce5d56;
+  .next {
+    right: 15px;
   }
 
   .services {
@@ -518,5 +553,19 @@ a {
 
   .details__title {
     padding-bottom: 7px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .prev {
+    left: 10px;
+  }
+
+  .next {
+    right: 10px;
+  }
+
+  .mobile__screen {
+    border: 1px solid #c6c6c6;
   }
 }

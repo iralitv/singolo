@@ -226,5 +226,17 @@
   .portfolio-img__item:nth-child(n+9) {
     display: none;
   }
+
+  .about {
+    padding: 33px 30px 45px;
+  }
+
+  .about__desc {
+    padding: 14px 0;
+  }
+
+  .employee__wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 

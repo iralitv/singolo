@@ -10,9 +10,9 @@ window.addEventListener('scroll', event => {
 
     if(section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
       link.classList.add('active');
-      link.classList.contains('active')
+      link.classList.contains('active');
     } else {
-      link.classList.remove('active')
+      link.classList.remove('active');
     }
   })
 });
@@ -31,7 +31,7 @@ SLIDER.addEventListener('click', event => {
 
 // slider
 function Slider (setting) {
-  let privates = {}
+  let privates = {};
 
   privates.setting = setting;
 
@@ -41,14 +41,14 @@ function Slider (setting) {
     'children': document.querySelector(privates.setting.wrap).children,
     'prev': document.querySelector(privates.setting.prev),
     'next': document.querySelector(privates.setting.next),
-  }
+  };
 
   privates.opt = {
     'position': 0,
     'max_position': document.querySelector(privates.setting.wrap).children.length,
-  }
+  };
 
-  privates.sel.wrap.appendChild(privates.sel.children[0].cloneNode(true))
+  privates.sel.wrap.appendChild(privates.sel.children[0].cloneNode(true));
 
   if(privates.sel.prev !== null) {
     privates.sel.prev.addEventListener('click', () => {
@@ -66,17 +66,17 @@ function Slider (setting) {
     --privates.opt.position;
 
     if(privates.opt.position < 0) {
-      privates.sel.wrap.classList.add('s-notransition')
-      privates.sel.wrap.style['transform'] = `translateX(-${privates.opt.max_position}00%)`
-      privates.opt.position = privates.opt.max_position - 1
+      privates.sel.wrap.classList.add('s-notransition');
+      privates.sel.wrap.style['transform'] = `translateX(-${privates.opt.max_position}00%)`;
+      privates.opt.position = privates.opt.max_position - 1;
     }
 
     setTimeout(() => {
-      privates.sel.wrap.classList.remove('s-notransition')
-      privates.sel.wrap.style['transform'] = `translateX(-${privates.opt.position}00%)`
+      privates.sel.wrap.classList.remove('s-notransition');
+      privates.sel.wrap.style['transform'] = `translateX(-${privates.opt.position}00%)`;
     }, 10)
 
-  }
+  };
 
   this.next_slide = () => {
     if(privates.opt.position < privates.opt.max_position) {
@@ -84,7 +84,7 @@ function Slider (setting) {
     }
 
     privates.sel.wrap.classList.remove('s-notransition');
-    privates.sel.wrap.style['transform'] = `translateX(-${privates.opt.position}00%)`
+    privates.sel.wrap.style['transform'] = `translateX(-${privates.opt.position}00%)`;
 
     privates.sel.wrap.addEventListener('webkitTransitionEnd', () => {
       if(privates.opt.position >= privates.opt.max_position) {
@@ -93,14 +93,14 @@ function Slider (setting) {
         privates.opt.position = 0;
       }
     })
-  }
+  };
 }
 
 new Slider({
   "main": ".js-carousel",
   "wrap": ".js-carousel__wrap",
   "prev": ".js-carousel__prev",
-  "next": ".js-carousel__next"
+  "next": ".js-carousel__next",
 });
 
 // portfolio
@@ -150,7 +150,7 @@ FORM.addEventListener('submit', event => {
 
   const defaultSubject = `<p>Without subject</p>`;
   const defaultDescription = `<p>Without description</p>`;
-  const content = Array.from(MODAL_INPUTS).map(item => {
+  MODAL_CONTENT.innerHTML = Array.from(MODAL_INPUTS).map(item => {
     if(item.value) {
       return `<p><span class="modal__subtitle">${item.name}</span>: ${item.value}</p>`
     }
@@ -159,8 +159,6 @@ FORM.addEventListener('submit', event => {
     }
     return defaultDescription;
   }).join('');
-
-  MODAL_CONTENT.innerHTML = content;
 
   FORM_INPUTS.forEach(item => item.value = '');
 });
@@ -183,8 +181,10 @@ const NAVIGATION = document.getElementById('navigation-id');
 HEADER.addEventListener('click', (event) => {
   if(event.target.parentElement === BURGER_BUTTON) {
     event.preventDefault();
+    BURGER_BUTTON.classList.toggle('burger-menu__button--active');
     NAVIGATION.classList.toggle('burger-menu--active');
   } else {
     NAVIGATION.classList.remove('burger-menu--active');
+    BURGER_BUTTON.classList.remove('burger-menu__button--active');
   }
-})
+});

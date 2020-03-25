@@ -10,7 +10,7 @@
 
 .feedback__desc {
   letter-spacing: -.5px;
-  margin: 27px 0 43px;
+  padding: 27px 0 43px;
   text-align: justify;
 }
 
@@ -230,6 +230,42 @@ textarea.form__item {
 
   .form__submit {
     align-self: start;
+  }
+
+  .form__submit.close {
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .feedback {
+    padding: 44px 32px 42px;
+  }
+
+  .feedback__desc {
+    padding: 14px 0 19px;
+  }
+
+  .quote {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .modal__content {
+    width: 80%;
+    padding: 10px 20px;
+  }
+
+  .footer {
+    justify-content: center;
+  }
+
+  .copyright {
+    display: none;
+  }
+
+  .form__submit {
+    align-self: normal;
+    padding: 15px 35px;
   }
 }
 
