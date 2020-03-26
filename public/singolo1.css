@@ -317,7 +317,8 @@ a {
   cursor: pointer;
   position: absolute;
   z-index: 2;
-  top: 47%;
+  top: 50%;
+  transform: translateY(-50%);
   padding: 16px;
   border-radius: 50%;
   user-select: none;
@@ -435,6 +436,10 @@ a {
 }
 
 @media screen and (max-width: 767px) {
+  .main-title {
+    line-height: 3.6rem;
+  }
+
   .main-desc {
     padding: 18px 0 25px;
   }
@@ -481,7 +486,7 @@ a {
 
   .main-menu__item {
     font-size: 2.4rem;
-    padding-bottom: 27px;
+    padding: 0 0 27px;
   }
 
   .link.active::after {
@@ -504,7 +509,7 @@ a {
 
   .slider__item {
     justify-content: space-around;
-    padding: 20px 0;
+    padding: 20px 10px;
   }
 
   .mobile {
@@ -532,6 +537,10 @@ a {
     box-shadow: 9px -9px 0 0 #ce5d56;
   }
 
+  .slider__item:nth-child(2) img {
+    height: 250px;
+  }
+
   .prev {
     left: 15px;
   }
@@ -557,12 +566,16 @@ a {
 }
 
 @media screen and (max-width: 375px) {
+  .slider__item:nth-child(2) img {
+    height: 150px;
+  }
+
   .prev {
-    left: 10px;
+    left: 5px;
   }
 
   .next {
-    right: 10px;
+    right: 5px;
   }
 
   .mobile__screen {
